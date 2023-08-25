@@ -47,12 +47,14 @@ function atualizaMediaFinal() {
     document.getElementById('media-final-resultado').innerHTML = mediaFinal >= 7 ? spanAprovado : spanReprovado ;
 }
 
-function calculaMediaFinal(){
-    let somaDasNotas = 0; 
-
-    for (let i = 0; i < notas.length; i++){
-        somaDasNotas += notas[i];
+function calculaMediaFinal() {
+    let somaDasNotas = 0;
+    for (let i = 0; i < notas.length; i++) {
+      somaDasNotas += notas[i];
     }
+    return (somaDasNotas / notas.length).toFixed(1);
 
-    return somaDasNotas / notas.length.toFixed(1);  
 }
+
+
+  
